@@ -135,6 +135,7 @@ export function FloatingReviewsPanel({
             variant="icon"
             size="icon"
             className="absolute right-4 top-4 z-10"
+            aria-label="Close reviews panel"
           >
             <Icon icon={Cancel01Icon} size={16} />
           </Button>

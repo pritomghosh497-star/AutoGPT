@@ -121,6 +121,7 @@ export const CustomControls = memo(
                 className={control.className}
                 data-id={control.id}
                 disabled={"disabled" in control ? control.disabled : false}
+                aria-label={control.label}
               >
                 {control.icon}
                 <span className="sr-only">{control.label}</span>
