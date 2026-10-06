@@ -64,6 +64,7 @@ export const RunGraph = ({ flowID }: { flowID: string | null }) => {
               size="icon"
               variant="ghost"
               data-id="simulate-graph-button"
+              aria-label="Simulate agent"
               onClick={() => void handleRunGraph({ dryRun: true })}
               disabled={!flowID || isLoading}
               className="group text-amber-600 hover:bg-amber-50 hover:text-amber-700"
@@ -87,6 +88,13 @@ export const RunGraph = ({ flowID }: { flowID: string | null }) => {
             size="icon"
             variant={isGraphRunning ? "destructive" : "primary"}
             data-id={isGraphRunning ? "stop-graph-button" : "run-graph-button"}
+            aria-label={
+              isLoading
+                ? "Processing"
+                : isGraphRunning
+                  ? "Stop agent"
+                  : "Run agent"
+            }
             onClick={
               isGraphRunning ? handleStopGraph : () => void handleRunGraph()
             }

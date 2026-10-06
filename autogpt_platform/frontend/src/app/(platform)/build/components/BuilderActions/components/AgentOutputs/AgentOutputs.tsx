@@ -95,6 +95,7 @@ export const AgentOutputs = ({ flowID }: { flowID: string | null }) => {
                 variant="outline"
                 size="icon"
                 data-id="agent-outputs-button"
+                aria-label="View agent outputs"
                 disabled={!flowID || !hasOutputs()}
               >
                 <Icon icon={BookOpen01Icon} className="size-4" />

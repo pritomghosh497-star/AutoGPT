@@ -1,0 +1,3 @@
+## 2024-05-18 - Missing ARIA Labels on Icon-Only Buttons
+**Learning:** Found several icon-only buttons (`variant="icon"` or `size="icon"`) in the builder interface (like "Run", "Stop", "Agent Outputs", and "Close" buttons) missing `aria-label` attributes. This is a common pattern when adding quick action buttons.
+**Action:** Always ensure `size="icon"` or `variant="icon"` buttons include an `aria-label` attribute describing their action, especially when the icon changes dynamically based on state (e.g., Run vs Stop).
