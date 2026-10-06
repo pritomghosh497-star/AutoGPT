@@ -59,6 +59,7 @@ export function FilterSheet({
                 className="p-0"
                 variant="ghost"
                 size="icon"
+                aria-label="Close filters"
                 onClick={handleCloseButton}
               >
                 <Icon icon={Cancel01Icon} size={20} />
