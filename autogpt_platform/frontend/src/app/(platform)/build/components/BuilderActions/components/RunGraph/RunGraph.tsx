@@ -63,6 +63,7 @@ export const RunGraph = ({ flowID }: { flowID: string | null }) => {
             <Button
               size="icon"
               variant="ghost"
+              aria-label="Simulate agent"
               data-id="simulate-graph-button"
               onClick={() => void handleRunGraph({ dryRun: true })}
               disabled={!flowID || isLoading}
@@ -86,6 +87,13 @@ export const RunGraph = ({ flowID }: { flowID: string | null }) => {
           <Button
             size="icon"
             variant={isGraphRunning ? "destructive" : "primary"}
+            aria-label={
+              isLoading
+                ? "Processing..."
+                : isGraphRunning
+                  ? "Stop agent"
+                  : "Run agent"
+            }
             data-id={isGraphRunning ? "stop-graph-button" : "run-graph-button"}
             onClick={
               isGraphRunning ? handleStopGraph : () => void handleRunGraph()

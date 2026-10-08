@@ -27,6 +27,7 @@ export function PublishToMarketplace({ flowID, flowVersion }: Props) {
           <Button
             variant="outline"
             size="icon"
+            aria-label="Publish to Marketplace"
             onClick={handlePublishToMarketplace}
             disabled={isDisabled}
           >
