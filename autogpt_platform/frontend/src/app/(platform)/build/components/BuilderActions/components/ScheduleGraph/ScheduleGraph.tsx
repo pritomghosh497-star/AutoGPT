@@ -27,6 +27,7 @@ export const ScheduleGraph = ({ flowID }: { flowID: string | null }) => {
             <Button
               variant="outline"
               size="icon"
+              aria-label="Schedule graph"
               data-id="schedule-graph-button"
               onClick={handleScheduleGraph}
               disabled={!flowID}

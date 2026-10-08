@@ -94,6 +94,7 @@ export const AgentOutputs = ({ flowID }: { flowID: string | null }) => {
               <Button
                 variant="outline"
                 size="icon"
+                aria-label="Agent outputs"
                 data-id="agent-outputs-button"
                 disabled={!flowID || !hasOutputs()}
               >
