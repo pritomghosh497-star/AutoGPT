@@ -55,8 +55,9 @@ export function ShowMore({
       {!isExpanded && "..."}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
+        aria-expanded={isExpanded}
         className={cn(
-          "ml-1 inline-flex items-center gap-1 font-medium text-black",
+          "ml-1 inline-flex items-center gap-1 rounded-sm font-medium text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
           toggleClassName,
         )}
         type="button"

@@ -52,8 +52,10 @@ export function ShowMoreText({
       {!isExpanded && "..."}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
+        aria-expanded={isExpanded}
+        aria-label={isExpanded ? "Show less" : "Show more"}
         className={cn(
-          "mt-2 flex h-[1rem] w-[1.75rem] items-center justify-center rounded-full bg-zinc-100 pb-2 font-medium text-black",
+          "mt-2 flex h-[1rem] w-[1.75rem] items-center justify-center rounded-full bg-zinc-100 pb-2 font-medium text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
           toggleClassName,
         )}
         type="button"

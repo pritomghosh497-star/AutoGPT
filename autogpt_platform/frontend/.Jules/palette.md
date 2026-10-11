@@ -1,0 +1,4 @@
+## 2024-03-09 - Accessible ShowMore Toggles
+
+**Learning:** Found two custom UI components (`ShowMore` and `ShowMoreText`) for expanding text that were missing crucial accessibility states. While the visual indicators (like "..." or "more/less" text) change correctly for sighted users, screen reader users rely on the `aria-expanded` attribute on the toggle button to know the component's state. `ShowMoreText` also needed an `aria-label` because it only used "..." as its visual text which screen readers might not interpret well as an action. Additionally, added focus rings so keyboard users can clearly see when they've tabbed onto these toggles.
+**Action:** Always include `aria-expanded={isExpanded}` on expandable/collapsible toggle buttons. If the button has non-descriptive content (like `...`), add a descriptive `aria-label` indicating action (e.g. "Show more"). Make sure focus-visible styles are applied.
