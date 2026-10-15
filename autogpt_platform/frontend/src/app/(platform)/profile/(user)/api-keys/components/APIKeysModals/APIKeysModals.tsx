@@ -119,7 +119,12 @@ export const APIKeysModals = () => {
             <code className="flex-1 rounded-md bg-secondary p-2 text-sm">
               {keyState.newApiKey}
             </code>
-            <Button size="icon" variant="outline" onClick={handleCopyKey}>
+            <Button
+              size="icon"
+              variant="outline"
+              onClick={handleCopyKey}
+              aria-label="Copy API Key"
+            >
               <LuCopy className="h-4 w-4" />
             </Button>
           </div>
