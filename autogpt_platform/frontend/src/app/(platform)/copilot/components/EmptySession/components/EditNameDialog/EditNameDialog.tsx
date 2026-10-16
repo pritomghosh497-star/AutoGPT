@@ -75,6 +75,8 @@ export function EditNameDialog({ currentName }: Props) {
         <button
           type="button"
           className="ml-1 inline-flex items-center text-violet-500 transition-colors hover:text-violet-700"
+          aria-label="Edit display name"
+          title="Edit display name"
         >
           <Icon icon={PencilIcon} size={16} />
         </button>
