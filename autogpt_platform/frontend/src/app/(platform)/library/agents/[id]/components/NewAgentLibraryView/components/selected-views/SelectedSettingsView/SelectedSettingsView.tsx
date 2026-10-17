@@ -36,6 +36,8 @@ export function SelectedSettingsView({ agent, onClearSelectedRun }: Props) {
             size="small"
             onClick={onClearSelectedRun}
             className="w-[2.375rem]"
+            aria-label="Back"
+            withTooltip={false}
           >
             <Icon icon={ArrowLeft02Icon} />
           </Button>
